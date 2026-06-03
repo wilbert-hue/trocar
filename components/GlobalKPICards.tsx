@@ -11,13 +11,15 @@ export function GlobalKPICards() {
   const kpiData = useMemo(() => {
     if (!data) return null
 
+    // Require at least one geography to display KPIs
+    if (!filters.geographies || filters.geographies.length === 0) {
+      return null
+    }
+
     // Use current filters to determine what to show
-    // Get target geography from filters - use all selected geographies or use all geographies
+    // Get target geography from filters - use all selected geographies
     const allGeographies = data.dimensions.geographies.all_geographies || []
-    // If no geographies are selected, we'll use all geographies (empty array means no filter)
-    let selectedGeographies = filters.geographies.length > 0 
-      ? filters.geographies // Use all selected geographies
-      : [] // Empty array means we'll show data for all geographies
+    let selectedGeographies = filters.geographies
     
     // Get segment type from filters (or use first segment type)
     const segmentTypes = Object.keys(data.dimensions.segments)
@@ -57,7 +59,7 @@ export function GlobalKPICards() {
     )
 
     // If no records match the current filters, try a fallback approach
-    // First, try without geography filter if geographies were selected
+    // Try without geography filter if geographies were selected but no records match
     if (globalRecords.length === 0 && selectedGeographies.length > 0) {
       // Try with all geographies for this segment type
       const allRecordsForSegmentType = dataset.filter(record => {
@@ -150,7 +152,7 @@ export function GlobalKPICards() {
     const marketName = data.metadata.market_name || 'Global Market'
 
     const geographyLabel = actualSelectedGeographies.length === 0
-      ? `Global ${marketName}`
+      ? marketName
       : actualSelectedGeographies.length === 1
       ? `${actualSelectedGeographies[0]} ${marketName}`
       : `${actualSelectedGeographies.length} Geographies ${marketName}`

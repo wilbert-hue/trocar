@@ -148,6 +148,11 @@ export function filterData(
   filters: FilterState & { advancedSegments?: any[] },
   geographyCountries?: Record<string, string[]>
 ): DataRecord[] {
+  // Require at least one geography — empty selection should show no chart data
+  if (!filters.geographies || filters.geographies.length === 0) {
+    return []
+  }
+
   // AUTOMATIC LEVEL DETECTION: Determine level based on selected segments
   // Hide aggregation level complexity from users
   let effectiveAggregationLevel = filters.aggregationLevel
@@ -239,8 +244,7 @@ export function filterData(
     // - "By Region" data exists under regional geographies (North America, Europe, etc.), NOT under Global
     // - The segments themselves ARE the geographical breakdown (e.g., U.S. under North America > By Region)
     // - Filtering by geography would incorrectly exclude all records when "Global" is selected
-    let geoMatch = filters.geographies.length === 0 ||
-      filters.geographies.includes(record.geography) ||
+    let geoMatch = filters.geographies.includes(record.geography) ||
       isRegionalSegmentType // Skip geography filter for regional segment types
 
     // Also match if the record's parent geography is in the selected list

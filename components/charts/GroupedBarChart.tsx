@@ -78,7 +78,7 @@ export function GroupedBarChart({ title, height = 400 }: GroupedBarChartProps) {
     let filtered = filterData(dataset, modifiedFilters)
 
     // If showLevel1Totals is enabled in geography mode, also include Level 1 aggregated records
-    if (filters.viewMode === 'geography-mode' && filters.showLevel1Totals) {
+    if (filters.viewMode === 'geography-mode' && filters.showLevel1Totals && filters.geographies.length > 0) {
       const level1Records = dataset.filter(record =>
         record.aggregation_level === 1 &&
         record.segment_type === filters.segmentType &&

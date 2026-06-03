@@ -1,63 +1,589 @@
 {
-  "Global": {
-    "By Type": {
-      "Sub-Normothermic Perfusion (20–34°C)": {},
-      "Warm or Normothermic Perfusion (35–37°C)": {}
+  "North America": {
+    "By Product Type": {
+      "Bladed Trocars": {},
+      "Bladeless Trocars": {},
+      "Optical Trocars": {},
+      "Hasson / Open Trocars": {},
+      "Balloon Trocars": {},
+      "Radially Expanding Trocars": {},
+      "Single-Port / Specialty Access Trocars": {},
+      "Other Product Types": {}
     },
-    "By Organ Type": {
-      "Liver": {},
-      "Heart": {},
-      "Lung": {},
-      "Kidney": {},
-      "Others (Pancreas, Small bowel / Intestine, Composite Tissues / Limb Perfusion (emerging use cases))": {}
+    "By Usability": {
+      "Disposable / Single-Use Trocars": {},
+      "Reusable Trocars": {},
+      "Hybrid Trocars": {}
     },
-    "Application / Use Case": {
-      "Organ Preservation": {},
-      "Viability Assessment": {},
-      "Physiologic Transport": {},
-      "Reconditioning Marginal Organs": {},
-      "Others (Research Use / Protocol development)": {}
+    "By Size / Diameter": {
+      "Less than 5 mm": {},
+      "5 mm": {},
+      "8 mm": {},
+      "10 mm": {},
+      "11 mm": {},
+      "12 mm": {},
+      "15 mm": {},
+      "Others (Above 15 mm, etc.)": {}
+    },
+    "By Seal Type": {
+      "Seal Less": {},
+      "Single Seal": {},
+      "Dual Seal": {},
+      "Universal Seal / Multi-Instrument Compatible": {}
+    },
+    "By Surgical Approach": {
+      "Conventional Multi-Port Laparoscopy": {},
+      "Single-Incision Laparoscopic Surgery (SILS)": {},
+      "Robotic-Assisted Minimally Invasive Surgery": {},
+      "Thoracoscopic": {},
+      "Other Minimally Invasive Procedures": {}
+    },
+    "By Clinical Specialty": {
+      "General Surgery": {},
+      "Gynecology": {},
+      "Urology": {},
+      "Bariatric Surgery": {},
+      "Colorectal Surgery": {},
+      "Thoracic Surgery": {},
+      "Pediatric Surgery": {},
+      "Oncology Surgery": {},
+      "Other Clinical Specialties": {}
+    },
+    "By Material Type": {
+      "Plastic / Polymer-Based Trocars": {},
+      "Stainless Steel Trocars": {},
+      "Composite Material Trocars": {}
+    },
+    "By Price Positioning": {
+      "Economy": {},
+      "Mid-Priced": {},
+      "Premium": {}
+    },
+    "By Procurement Mode": {
+      "Online": {},
+      "Offline": {}
     },
     "By End User": {
-      "Hospitals & Clinics": {},
-      "Specialty Clinic/Centers": {},
-      "Transplant Centers": {},
-      "Others (Research Institutes/Centers, Organ Procurement Organizations, etc.)": {}
+      "Hospitals": {},
+      "Ambulatory Surgical Centers (ASCs)": {},
+      "Specialty Clinics": {},
+      "Day Care Surgical Centers": {},
+      "Others (Academic & Research Institutes, etc.)": {}
+    },
+    "By Country": {
+      "U.S.": {},
+      "Canada": {}
+    }
+  },
+  "U.S.": {
+    "By Product Type": {
+      "Bladed Trocars": {},
+      "Bladeless Trocars": {},
+      "Optical Trocars": {},
+      "Hasson / Open Trocars": {},
+      "Balloon Trocars": {},
+      "Radially Expanding Trocars": {},
+      "Single-Port / Specialty Access Trocars": {},
+      "Other Product Types": {}
+    },
+    "By Usability": {
+      "Disposable / Single-Use Trocars": {},
+      "Reusable Trocars": {},
+      "Hybrid Trocars": {}
+    },
+    "By Size / Diameter": {
+      "Less than 5 mm": {},
+      "5 mm": {},
+      "8 mm": {},
+      "10 mm": {},
+      "11 mm": {},
+      "12 mm": {},
+      "15 mm": {},
+      "Others (Above 15 mm, etc.)": {}
+    },
+    "By Seal Type": {
+      "Seal Less": {},
+      "Single Seal": {},
+      "Dual Seal": {},
+      "Universal Seal / Multi-Instrument Compatible": {}
+    },
+    "By Surgical Approach": {
+      "Conventional Multi-Port Laparoscopy": {},
+      "Single-Incision Laparoscopic Surgery (SILS)": {},
+      "Robotic-Assisted Minimally Invasive Surgery": {},
+      "Thoracoscopic": {},
+      "Other Minimally Invasive Procedures": {}
+    },
+    "By Clinical Specialty": {
+      "General Surgery": {},
+      "Gynecology": {},
+      "Urology": {},
+      "Bariatric Surgery": {},
+      "Colorectal Surgery": {},
+      "Thoracic Surgery": {},
+      "Pediatric Surgery": {},
+      "Oncology Surgery": {},
+      "Other Clinical Specialties": {}
+    },
+    "By Material Type": {
+      "Plastic / Polymer-Based Trocars": {},
+      "Stainless Steel Trocars": {},
+      "Composite Material Trocars": {}
+    },
+    "By Price Positioning": {
+      "Economy": {},
+      "Mid-Priced": {},
+      "Premium": {}
+    },
+    "By Procurement Mode": {
+      "Online": {},
+      "Offline": {}
+    },
+    "By End User": {
+      "Hospitals": {},
+      "Ambulatory Surgical Centers (ASCs)": {},
+      "Specialty Clinics": {},
+      "Day Care Surgical Centers": {},
+      "Others (Academic & Research Institutes, etc.)": {}
     },
     "By Region": {
-      "North America": {
-        "U.S.": {},
-        "Canada": {}
-      },
-      "Europe": {
-        "U.K.": {},
-        "Germany": {},
-        "Italy": {},
-        "France": {},
-        "Spain": {},
-        "Russia": {},
-        "Rest of Europe": {}
-      },
-      "Asia Pacific": {
-        "China": {},
-        "India": {},
-        "Japan": {},
-        "South Korea": {},
-        "ASEAN": {},
-        "Australia": {},
-        "Rest of Asia Pacific": {}
-      },
-      "Latin America": {
-        "Brazil": {},
-        "Argentina": {},
-        "Mexico": {},
-        "Rest of Latin America": {}
-      },
-      "Middle East & Africa": {
-        "GCC": {},
-        "South Africa": {},
-        "Rest of Middle East & Africa": {}
-      }
+      "Northeast": {},
+      "Southeast": {},
+      "Midwest": {},
+      "Southwest": {},
+      "West": {}
+    }
+  },
+  "Canada": {
+    "By Product Type": {
+      "Bladed Trocars": {},
+      "Bladeless Trocars": {},
+      "Optical Trocars": {},
+      "Hasson / Open Trocars": {},
+      "Balloon Trocars": {},
+      "Radially Expanding Trocars": {},
+      "Single-Port / Specialty Access Trocars": {},
+      "Other Product Types": {}
+    },
+    "By Usability": {
+      "Disposable / Single-Use Trocars": {},
+      "Reusable Trocars": {},
+      "Hybrid Trocars": {}
+    },
+    "By Size / Diameter": {
+      "Less than 5 mm": {},
+      "5 mm": {},
+      "8 mm": {},
+      "10 mm": {},
+      "11 mm": {},
+      "12 mm": {},
+      "15 mm": {},
+      "Others (Above 15 mm, etc.)": {}
+    },
+    "By Seal Type": {
+      "Seal Less": {},
+      "Single Seal": {},
+      "Dual Seal": {},
+      "Universal Seal / Multi-Instrument Compatible": {}
+    },
+    "By Surgical Approach": {
+      "Conventional Multi-Port Laparoscopy": {},
+      "Single-Incision Laparoscopic Surgery (SILS)": {},
+      "Robotic-Assisted Minimally Invasive Surgery": {},
+      "Thoracoscopic": {},
+      "Other Minimally Invasive Procedures": {}
+    },
+    "By Clinical Specialty": {
+      "General Surgery": {},
+      "Gynecology": {},
+      "Urology": {},
+      "Bariatric Surgery": {},
+      "Colorectal Surgery": {},
+      "Thoracic Surgery": {},
+      "Pediatric Surgery": {},
+      "Oncology Surgery": {},
+      "Other Clinical Specialties": {}
+    },
+    "By Material Type": {
+      "Plastic / Polymer-Based Trocars": {},
+      "Stainless Steel Trocars": {},
+      "Composite Material Trocars": {}
+    },
+    "By Price Positioning": {
+      "Economy": {},
+      "Mid-Priced": {},
+      "Premium": {}
+    },
+    "By Procurement Mode": {
+      "Online": {},
+      "Offline": {}
+    },
+    "By End User": {
+      "Hospitals": {},
+      "Ambulatory Surgical Centers (ASCs)": {},
+      "Specialty Clinics": {},
+      "Day Care Surgical Centers": {},
+      "Others (Academic & Research Institutes, etc.)": {}
+    }
+  },
+  "Northeast": {
+    "By Product Type": {
+      "Bladed Trocars": {},
+      "Bladeless Trocars": {},
+      "Optical Trocars": {},
+      "Hasson / Open Trocars": {},
+      "Balloon Trocars": {},
+      "Radially Expanding Trocars": {},
+      "Single-Port / Specialty Access Trocars": {},
+      "Other Product Types": {}
+    },
+    "By Usability": {
+      "Disposable / Single-Use Trocars": {},
+      "Reusable Trocars": {},
+      "Hybrid Trocars": {}
+    },
+    "By Size / Diameter": {
+      "Less than 5 mm": {},
+      "5 mm": {},
+      "8 mm": {},
+      "10 mm": {},
+      "11 mm": {},
+      "12 mm": {},
+      "15 mm": {},
+      "Others (Above 15 mm, etc.)": {}
+    },
+    "By Seal Type": {
+      "Seal Less": {},
+      "Single Seal": {},
+      "Dual Seal": {},
+      "Universal Seal / Multi-Instrument Compatible": {}
+    },
+    "By Surgical Approach": {
+      "Conventional Multi-Port Laparoscopy": {},
+      "Single-Incision Laparoscopic Surgery (SILS)": {},
+      "Robotic-Assisted Minimally Invasive Surgery": {},
+      "Thoracoscopic": {},
+      "Other Minimally Invasive Procedures": {}
+    },
+    "By Clinical Specialty": {
+      "General Surgery": {},
+      "Gynecology": {},
+      "Urology": {},
+      "Bariatric Surgery": {},
+      "Colorectal Surgery": {},
+      "Thoracic Surgery": {},
+      "Pediatric Surgery": {},
+      "Oncology Surgery": {},
+      "Other Clinical Specialties": {}
+    },
+    "By Material Type": {
+      "Plastic / Polymer-Based Trocars": {},
+      "Stainless Steel Trocars": {},
+      "Composite Material Trocars": {}
+    },
+    "By Price Positioning": {
+      "Economy": {},
+      "Mid-Priced": {},
+      "Premium": {}
+    },
+    "By Procurement Mode": {
+      "Online": {},
+      "Offline": {}
+    },
+    "By End User": {
+      "Hospitals": {},
+      "Ambulatory Surgical Centers (ASCs)": {},
+      "Specialty Clinics": {},
+      "Day Care Surgical Centers": {},
+      "Others (Academic & Research Institutes, etc.)": {}
+    }
+  },
+  "Southeast": {
+    "By Product Type": {
+      "Bladed Trocars": {},
+      "Bladeless Trocars": {},
+      "Optical Trocars": {},
+      "Hasson / Open Trocars": {},
+      "Balloon Trocars": {},
+      "Radially Expanding Trocars": {},
+      "Single-Port / Specialty Access Trocars": {},
+      "Other Product Types": {}
+    },
+    "By Usability": {
+      "Disposable / Single-Use Trocars": {},
+      "Reusable Trocars": {},
+      "Hybrid Trocars": {}
+    },
+    "By Size / Diameter": {
+      "Less than 5 mm": {},
+      "5 mm": {},
+      "8 mm": {},
+      "10 mm": {},
+      "11 mm": {},
+      "12 mm": {},
+      "15 mm": {},
+      "Others (Above 15 mm, etc.)": {}
+    },
+    "By Seal Type": {
+      "Seal Less": {},
+      "Single Seal": {},
+      "Dual Seal": {},
+      "Universal Seal / Multi-Instrument Compatible": {}
+    },
+    "By Surgical Approach": {
+      "Conventional Multi-Port Laparoscopy": {},
+      "Single-Incision Laparoscopic Surgery (SILS)": {},
+      "Robotic-Assisted Minimally Invasive Surgery": {},
+      "Thoracoscopic": {},
+      "Other Minimally Invasive Procedures": {}
+    },
+    "By Clinical Specialty": {
+      "General Surgery": {},
+      "Gynecology": {},
+      "Urology": {},
+      "Bariatric Surgery": {},
+      "Colorectal Surgery": {},
+      "Thoracic Surgery": {},
+      "Pediatric Surgery": {},
+      "Oncology Surgery": {},
+      "Other Clinical Specialties": {}
+    },
+    "By Material Type": {
+      "Plastic / Polymer-Based Trocars": {},
+      "Stainless Steel Trocars": {},
+      "Composite Material Trocars": {}
+    },
+    "By Price Positioning": {
+      "Economy": {},
+      "Mid-Priced": {},
+      "Premium": {}
+    },
+    "By Procurement Mode": {
+      "Online": {},
+      "Offline": {}
+    },
+    "By End User": {
+      "Hospitals": {},
+      "Ambulatory Surgical Centers (ASCs)": {},
+      "Specialty Clinics": {},
+      "Day Care Surgical Centers": {},
+      "Others (Academic & Research Institutes, etc.)": {}
+    }
+  },
+  "Midwest": {
+    "By Product Type": {
+      "Bladed Trocars": {},
+      "Bladeless Trocars": {},
+      "Optical Trocars": {},
+      "Hasson / Open Trocars": {},
+      "Balloon Trocars": {},
+      "Radially Expanding Trocars": {},
+      "Single-Port / Specialty Access Trocars": {},
+      "Other Product Types": {}
+    },
+    "By Usability": {
+      "Disposable / Single-Use Trocars": {},
+      "Reusable Trocars": {},
+      "Hybrid Trocars": {}
+    },
+    "By Size / Diameter": {
+      "Less than 5 mm": {},
+      "5 mm": {},
+      "8 mm": {},
+      "10 mm": {},
+      "11 mm": {},
+      "12 mm": {},
+      "15 mm": {},
+      "Others (Above 15 mm, etc.)": {}
+    },
+    "By Seal Type": {
+      "Seal Less": {},
+      "Single Seal": {},
+      "Dual Seal": {},
+      "Universal Seal / Multi-Instrument Compatible": {}
+    },
+    "By Surgical Approach": {
+      "Conventional Multi-Port Laparoscopy": {},
+      "Single-Incision Laparoscopic Surgery (SILS)": {},
+      "Robotic-Assisted Minimally Invasive Surgery": {},
+      "Thoracoscopic": {},
+      "Other Minimally Invasive Procedures": {}
+    },
+    "By Clinical Specialty": {
+      "General Surgery": {},
+      "Gynecology": {},
+      "Urology": {},
+      "Bariatric Surgery": {},
+      "Colorectal Surgery": {},
+      "Thoracic Surgery": {},
+      "Pediatric Surgery": {},
+      "Oncology Surgery": {},
+      "Other Clinical Specialties": {}
+    },
+    "By Material Type": {
+      "Plastic / Polymer-Based Trocars": {},
+      "Stainless Steel Trocars": {},
+      "Composite Material Trocars": {}
+    },
+    "By Price Positioning": {
+      "Economy": {},
+      "Mid-Priced": {},
+      "Premium": {}
+    },
+    "By Procurement Mode": {
+      "Online": {},
+      "Offline": {}
+    },
+    "By End User": {
+      "Hospitals": {},
+      "Ambulatory Surgical Centers (ASCs)": {},
+      "Specialty Clinics": {},
+      "Day Care Surgical Centers": {},
+      "Others (Academic & Research Institutes, etc.)": {}
+    }
+  },
+  "Southwest": {
+    "By Product Type": {
+      "Bladed Trocars": {},
+      "Bladeless Trocars": {},
+      "Optical Trocars": {},
+      "Hasson / Open Trocars": {},
+      "Balloon Trocars": {},
+      "Radially Expanding Trocars": {},
+      "Single-Port / Specialty Access Trocars": {},
+      "Other Product Types": {}
+    },
+    "By Usability": {
+      "Disposable / Single-Use Trocars": {},
+      "Reusable Trocars": {},
+      "Hybrid Trocars": {}
+    },
+    "By Size / Diameter": {
+      "Less than 5 mm": {},
+      "5 mm": {},
+      "8 mm": {},
+      "10 mm": {},
+      "11 mm": {},
+      "12 mm": {},
+      "15 mm": {},
+      "Others (Above 15 mm, etc.)": {}
+    },
+    "By Seal Type": {
+      "Seal Less": {},
+      "Single Seal": {},
+      "Dual Seal": {},
+      "Universal Seal / Multi-Instrument Compatible": {}
+    },
+    "By Surgical Approach": {
+      "Conventional Multi-Port Laparoscopy": {},
+      "Single-Incision Laparoscopic Surgery (SILS)": {},
+      "Robotic-Assisted Minimally Invasive Surgery": {},
+      "Thoracoscopic": {},
+      "Other Minimally Invasive Procedures": {}
+    },
+    "By Clinical Specialty": {
+      "General Surgery": {},
+      "Gynecology": {},
+      "Urology": {},
+      "Bariatric Surgery": {},
+      "Colorectal Surgery": {},
+      "Thoracic Surgery": {},
+      "Pediatric Surgery": {},
+      "Oncology Surgery": {},
+      "Other Clinical Specialties": {}
+    },
+    "By Material Type": {
+      "Plastic / Polymer-Based Trocars": {},
+      "Stainless Steel Trocars": {},
+      "Composite Material Trocars": {}
+    },
+    "By Price Positioning": {
+      "Economy": {},
+      "Mid-Priced": {},
+      "Premium": {}
+    },
+    "By Procurement Mode": {
+      "Online": {},
+      "Offline": {}
+    },
+    "By End User": {
+      "Hospitals": {},
+      "Ambulatory Surgical Centers (ASCs)": {},
+      "Specialty Clinics": {},
+      "Day Care Surgical Centers": {},
+      "Others (Academic & Research Institutes, etc.)": {}
+    }
+  },
+  "West": {
+    "By Product Type": {
+      "Bladed Trocars": {},
+      "Bladeless Trocars": {},
+      "Optical Trocars": {},
+      "Hasson / Open Trocars": {},
+      "Balloon Trocars": {},
+      "Radially Expanding Trocars": {},
+      "Single-Port / Specialty Access Trocars": {},
+      "Other Product Types": {}
+    },
+    "By Usability": {
+      "Disposable / Single-Use Trocars": {},
+      "Reusable Trocars": {},
+      "Hybrid Trocars": {}
+    },
+    "By Size / Diameter": {
+      "Less than 5 mm": {},
+      "5 mm": {},
+      "8 mm": {},
+      "10 mm": {},
+      "11 mm": {},
+      "12 mm": {},
+      "15 mm": {},
+      "Others (Above 15 mm, etc.)": {}
+    },
+    "By Seal Type": {
+      "Seal Less": {},
+      "Single Seal": {},
+      "Dual Seal": {},
+      "Universal Seal / Multi-Instrument Compatible": {}
+    },
+    "By Surgical Approach": {
+      "Conventional Multi-Port Laparoscopy": {},
+      "Single-Incision Laparoscopic Surgery (SILS)": {},
+      "Robotic-Assisted Minimally Invasive Surgery": {},
+      "Thoracoscopic": {},
+      "Other Minimally Invasive Procedures": {}
+    },
+    "By Clinical Specialty": {
+      "General Surgery": {},
+      "Gynecology": {},
+      "Urology": {},
+      "Bariatric Surgery": {},
+      "Colorectal Surgery": {},
+      "Thoracic Surgery": {},
+      "Pediatric Surgery": {},
+      "Oncology Surgery": {},
+      "Other Clinical Specialties": {}
+    },
+    "By Material Type": {
+      "Plastic / Polymer-Based Trocars": {},
+      "Stainless Steel Trocars": {},
+      "Composite Material Trocars": {}
+    },
+    "By Price Positioning": {
+      "Economy": {},
+      "Mid-Priced": {},
+      "Premium": {}
+    },
+    "By Procurement Mode": {
+      "Online": {},
+      "Offline": {}
+    },
+    "By End User": {
+      "Hospitals": {},
+      "Ambulatory Surgical Centers (ASCs)": {},
+      "Specialty Clinics": {},
+      "Day Care Surgical Centers": {},
+      "Others (Academic & Research Institutes, etc.)": {}
     }
   }
 }

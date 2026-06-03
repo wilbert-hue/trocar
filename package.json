@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "convert-data": "node convert_trocar_excel.js"
   },
   "dependencies": {
     "@radix-ui/react-select": "^2.2.6",

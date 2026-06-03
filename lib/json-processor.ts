@@ -1266,53 +1266,80 @@ export async function processJsonDataAsync(
       throw new Error('No geographies found in any data source. Please check your JSON structure.')
     }
 
-    // Extract regions AND countries from "By Region" segment type as additional geographies
-    // This builds a full geography hierarchy: Global > Regions > Countries
+    // Build geography hierarchy from "By Country" and "By Region" segment types
+    // Supports: North America > U.S./Canada > U.S. sub-regions (Northeast, etc.)
     const regionGeographies: string[] = []
     const regionToCountries: Record<string, string[]> = {}
     const allCountries: string[] = []
+
+    const isGeoSegmentKey = (key: string) =>
+      !/^\d{4}$/.test(key) && key !== 'CAGR' && key !== '_aggregated' && key !== '_level'
+
+    const getDirectChildren = (node: Record<string, unknown> | undefined): string[] => {
+      if (!node || typeof node !== 'object') return []
+      return Object.keys(node).filter(key => {
+        if (!isGeoSegmentKey(key)) return false
+        const value = node[key]
+        return value && typeof value === 'object' && !Array.isArray(value)
+      })
+    }
+
     for (const topGeo of geographies) {
       const geoData = structureData[topGeo]
-      if (geoData && typeof geoData === 'object') {
-        // Look for "By Region" segment type
-        const byRegionData = geoData['By Region']
-        if (byRegionData && typeof byRegionData === 'object') {
-          // Extract region names (first level keys under "By Region")
-          const regions = Object.keys(byRegionData).filter(key => {
-            const value = byRegionData[key]
-            return value && typeof value === 'object' && !Array.isArray(value)
-          })
-          regions.forEach(region => {
-            if (!regionGeographies.includes(region) && !geographies.includes(region)) {
-              regionGeographies.push(region)
+      if (!geoData || typeof geoData !== 'object') continue
+
+      // Countries under a top-level geography (e.g. North America > By Country > U.S., Canada)
+      const byCountryData = geoData['By Country'] as Record<string, unknown> | undefined
+      if (byCountryData) {
+        const countries = getDirectChildren(byCountryData)
+        if (countries.length > 0) {
+          regionToCountries[topGeo] = countries
+          countries.forEach(country => {
+            if (!regionGeographies.includes(country)) {
+              regionGeographies.push(country)
             }
-            // Extract countries under each region (second level keys, excluding the region name itself)
-            const regionData = byRegionData[region]
-            if (regionData && typeof regionData === 'object') {
-              const countries = Object.keys(regionData).filter(key => {
-                return key !== region && typeof regionData[key] === 'object' && !Array.isArray(regionData[key])
-              })
-              if (countries.length > 0) {
-                regionToCountries[region] = countries
-                countries.forEach(country => {
+          })
+        }
+      }
+
+      // Sub-regions under a country (e.g. U.S. > By Region > Northeast, Southeast, ...)
+      const byRegionData = geoData['By Region'] as Record<string, unknown> | undefined
+      if (byRegionData) {
+        const subRegions = getDirectChildren(byRegionData)
+        if (subRegions.length > 0) {
+          // If this geo is already a country/region in the hierarchy, nest sub-regions under it
+          if (regionGeographies.includes(topGeo) || geographies.includes(topGeo)) {
+            regionToCountries[topGeo] = subRegions
+            subRegions.forEach(subRegion => {
+              if (!allCountries.includes(subRegion)) {
+                allCountries.push(subRegion)
+              }
+            })
+          } else {
+            // Legacy: top-level "By Region" (multi-region global datasets)
+            subRegions.forEach(region => {
+              if (!regionGeographies.includes(region) && !geographies.includes(region)) {
+                regionGeographies.push(region)
+              }
+              const regionData = byRegionData[region] as Record<string, unknown> | undefined
+              const nestedCountries = getDirectChildren(regionData).filter(key => key !== region)
+              if (nestedCountries.length > 0) {
+                regionToCountries[region] = nestedCountries
+                nestedCountries.forEach(country => {
                   if (!allCountries.includes(country)) {
                     allCountries.push(country)
                   }
                 })
               }
-            }
-          })
+            })
+          }
         }
       }
     }
 
-    // Add regions and countries to geographies list
-    if (regionGeographies.length > 0) {
-      console.log(`Found ${regionGeographies.length} regions from "By Region":`, regionGeographies)
-      geographies = [...geographies, ...regionGeographies]
-    }
+    // Add sub-regions to geographies list (countries in the UI hierarchy sense)
     if (allCountries.length > 0) {
-      console.log(`Found ${allCountries.length} countries from "By Region":`, allCountries)
+      console.log(`Found ${allCountries.length} sub-regions/countries:`, allCountries)
       geographies = [...geographies, ...allCountries]
     }
 
@@ -1472,9 +1499,9 @@ export async function processJsonDataAsync(
     
     // Build metadata
     const metadata: Metadata = {
-      market_name: 'Normothermic Machine Perfusion Market',
+      market_name: 'North America & US Trocar Market',
       market_type: 'Market Analysis',
-      industry: 'Healthcare & Pharmaceuticals',
+      industry: 'Medical Devices',
       years: allYears,
       start_year: startYear,
       base_year: baseYear,
@@ -1483,7 +1510,7 @@ export async function processJsonDataAsync(
       forecast_years: allYears.filter(y => y > historicalEndYear),
       currency: 'USD',
       value_unit: 'Million',
-      volume_unit: 'Million Units',
+      volume_unit: 'Thousand Units',
       has_value: valueRecords.length > 0,
       has_volume: volumeRecords.length > 0,
     }
