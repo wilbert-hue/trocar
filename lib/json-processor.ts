@@ -1499,7 +1499,7 @@ export async function processJsonDataAsync(
     
     // Build metadata
     const metadata: Metadata = {
-      market_name: '& US Trocar Market',
+      market_name: 'North America & US Trocar Market',
       market_type: 'Market Analysis',
       industry: 'Medical Devices',
       years: allYears,
